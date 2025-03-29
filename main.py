@@ -8,3 +8,4 @@ if st.button("Scrape site"):
     st.write("Scraping the website")
     result= scrape_website(url)
     print(result)
+    st.write(result)
