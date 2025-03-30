@@ -18,7 +18,7 @@ def parse_with_ollama(dom_chunks, parse_description):
     parsed_results =[]
 
     for i,chunk in enumerate(dom_chunks, start=1):
-        response = chain.invoke({dom_content: chunk, "parse_description": parse_description})
+        response = chain.invoke({"dom_content": chunk, "parse_description": parse_description})
 
         print(f"Parsed batch {i} of {len(dom_chunks)}")
         parsed_results.append(response)

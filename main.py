@@ -13,8 +13,8 @@ if st.button("Scrape site"):
     with st.expander("View DOM Content"):
         st.text_area("DOM Content", cleaned_content, height=300)
 
-if "DOM Content" in st.session_state:
-    parse_description = st.text_area("Descrive what you want to parse?")
+if "dom_content" in st.session_state:
+    parse_description = st.text_area("Describe what you want to parse?")
 
     if st.button("Parse Content"):
         if parse_description:
